@@ -7,6 +7,6 @@ sure to change 'module.exports' to a running, reachable multi server instance.
 define(function(require, exports, module) {
 
 	//module.exports = 'localhost';http://nodepli-devicemapping.rhcloud.com/
-	module.exports = 'http://nodepli-devicemapping.rhcloud.com/';
+	module.exports = 'openshift.redhat.com';
 
 });
