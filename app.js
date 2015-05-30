@@ -17,7 +17,7 @@ var express = require('express'),
 // all environments
 
 app.set('ipaddress', process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1");
-app.set('port', process.env.OPENSHIFT_NODEJS_PORT || 80);
+app.set('port', process.env.OPENSHIFT_NODEJS_PORT || 8080);
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
 app.use(express.logger('dev'));
@@ -55,7 +55,7 @@ app.get('/tron', routes.tron);
 app.get('/image', routes.image);
 app.get('/avatar', routes.avatar);
 
-server.listen(app.get('port'),app.get('port'), function() {
+server.listen(app.get('port'),app.get('ipaddress'), function() {
 	console.log('Express server listening on port ' + app.get('port'));
 });
 
